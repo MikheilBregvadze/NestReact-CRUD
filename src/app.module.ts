@@ -1,13 +1,22 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ProductModule } from './product/product.module';
+import { ConfigModule, ConfigService } from '@nestjs/config';
+import configuration from './config/configuration';
 
 @Module({
   imports: [
+    ConfigModule.forRoot({
+      load: [configuration],
+    }),
+    MongooseModule.forRootAsync({
+      imports: [ConfigModule],
+      useFactory: async (configService: ConfigService) => ({
+        uri: configService.get('DATABASE_URL'),
+      }),
+      inject: [ConfigService],
+    }),
     ProductModule,
-    MongooseModule.forRoot(
-      'mongodb+srv://Misho123:Misho123@cluster0.ixt7b.mongodb.net/nestjs?retryWrites=true&w=majority',
-    ),
   ],
 })
 export class AppModule {}
