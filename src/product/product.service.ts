@@ -37,6 +37,19 @@ export class ProductService {
     if (product) return product;
   }
 
+  async getProductByCategory(category) {
+    let products;
+    try {
+      products = await this.productModel.find({ category }).exec();
+    } catch (error) {
+      throw new NotFoundException('Could not find product.');
+    }
+    if (!products) {
+      throw new NotFoundException('Could not find product.');
+    }
+    return products;
+  }
+
   async updateProduct(id, productDto) {
     const product = await this.findProduct(id);
     if (product)

@@ -5,13 +5,13 @@ const Navigation = () => {
     <nav>
       <ul>
         <li>
-          <Link to="/cruz">CRUZ</Link>
+          <Link to="/product/cruz">CRUZ</Link>
         </li>
         <li>
-          <Link to="/tracker">TRACKER</Link>
+          <Link to="/product/tracker">TRACKER</Link>
         </li>
         <li>
-          <Link to="/scrambler">SCRAMBLER</Link>
+          <Link to="/product/scrambler">SCRAMBLER</Link>
         </li>
       </ul>
     </nav>

@@ -3,3 +3,9 @@
     height: 105px;
     background: url("../../../../assets/images/logo.png");
 }
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

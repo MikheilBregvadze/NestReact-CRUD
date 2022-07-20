@@ -4,7 +4,7 @@ import style from './Header.module.css';
 
 const Header = () => {
   return (
-    <header>
+    <header className={style.header}>
       <Navigation />
       <Link to="/">
         <div className={style.logo} />

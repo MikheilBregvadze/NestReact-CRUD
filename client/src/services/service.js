@@ -8,3 +8,8 @@ export function GetAllProducts() {
 export function GetProductById(id) {
   return axios.get(GetBaseUrl() + `/product/${id}`);
 }
+
+export function GetProductsByCategory(category) {
+  return axios.get(GetBaseUrl() + `/product/category/${category}`);
+}
+
