@@ -1,4 +1,4 @@
-import Products from "./pages/products/Products";
+import Products from "./pages/desktop/products/Products";
 import { ProductProvider } from "./context/products.context";
 import './style.css'
 

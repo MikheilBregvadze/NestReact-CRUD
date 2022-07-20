@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import { GetAllProducts } from "../../services/service";
-import useProduct from "../../context/products.context";
+import { GetAllProducts } from "../../../services/service";
+import useProduct from "../../../context/products.context";
 import ProductItem from "./productItem/ProductItem";
 
 import style from './Products.module.css';
