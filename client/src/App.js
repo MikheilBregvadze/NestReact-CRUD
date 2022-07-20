@@ -1,16 +1,14 @@
-import { GetAllProducts } from "./services/service";
-import { useEffect } from "react";
+import Products from "./pages/products/Products";
+import { ProductProvider } from "./context/products.context";
+import './style.css'
 
 function App() {
-  useEffect(() => {
-    GetAllProducts()
-      .then(res => console.log(res.data[0]))
-      .catch(error => console.log(error))
-  }, [])
   return (
-    <div className="App">
-      App
-    </div>
+    <ProductProvider>
+      <div className="App">
+        <Products />
+      </div>
+    </ProductProvider>
   );
 }
 

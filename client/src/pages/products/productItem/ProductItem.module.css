@@ -1,0 +1,16 @@
+.row {
+    width: calc(33.333% - 10px);
+    min-height: 650px;
+    margin-bottom: 15px;
+}
+
+.container {
+    height: 100%;
+}
+
+.image {
+    margin: auto;
+    width: 260px;
+    height: 258px;
+    background: url("../../../assets/images/bikes/1.png");
+}
