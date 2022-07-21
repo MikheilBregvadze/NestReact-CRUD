@@ -1,0 +1,21 @@
+.list {
+    display: flex;
+}
+
+.list li {
+    margin-right: 25px;
+    list-style: none;
+}
+
+.list a {
+    color: #000000;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-family: var(--font-light);
+}
+
+
+.list a[aria-current="page"] {
+    font-family: var(--font-regular) !important;
+}

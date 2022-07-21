@@ -6,9 +6,11 @@ const Header = () => {
   return (
     <header className={style.header}>
       <Navigation />
-      <Link to="/">
-        <div className={style.logo} />
-      </Link>
+      <div className={style.logoCenter}>
+        <Link to="/">
+          <div className={style.logo} />
+        </Link>
+      </div>
       <div>
         Cart
       </div>

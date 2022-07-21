@@ -5,11 +5,11 @@ import useProduct from "../../../context/products.context";
 import Product from "./product/Product";
 
 import style from './Products.module.css';
+import NavigationBottom from "../layout/navigationBottom/NavigationBottom";
 
 const Products = () => {
   const { pathname } = useLocation();
   const { products, getProducts } = useProduct();
-  console.log(pathname.replace('/product/', ''));
   useEffect(() => {
     GetProductsByCategory(pathname.replace('/product/', ''))
       .then(res => {
@@ -18,17 +18,20 @@ const Products = () => {
   }, [getProducts, pathname])
 
   return (
-    <div className={style.row}>
-      {products &&
-        products.map((product, index) =>
-          <Product
-            index={index + 1}
-            key={product._id}
-            product={product}
-          />
-        )
-      }
-    </div>
+    <>
+      <NavigationBottom />
+      <div className={style.row}>
+        {products &&
+          products.map((product, index) =>
+            <Product
+              index={index + 1}
+              key={product._id}
+              product={product}
+            />
+          )
+        }
+      </div>
+    </>
   );
 };
 

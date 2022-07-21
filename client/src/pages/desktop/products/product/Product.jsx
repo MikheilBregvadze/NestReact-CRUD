@@ -2,6 +2,7 @@ import {Link} from "react-router-dom";
 import style from './Product.module.css';
 
 const Product = (props) => {
+  console.log(process.env.PUBLIC_URL);
   return (
     <div className={style.row}>
       <div className={style.container}>

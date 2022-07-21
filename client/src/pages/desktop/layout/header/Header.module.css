@@ -5,7 +5,19 @@
 }
 
 .header {
+    width: 1480px;
     display: flex;
+    margin: auto;
+    position: relative;
     align-items: center;
     justify-content: space-between;
+}
+
+.logoCenter {
+    position: absolute;
+    width: min-content;
+    left: 0;
+    right: 0;
+    top: -38px;
+    margin: auto;
 }

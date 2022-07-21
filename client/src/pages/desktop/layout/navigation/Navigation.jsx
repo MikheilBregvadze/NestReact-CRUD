@@ -1,17 +1,18 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import style from './Navigation.module.css';
 
 const Navigation = () => {
   return (
     <nav>
-      <ul>
+      <ul className={style.list}>
         <li>
-          <Link to="/product/cruz">CRUZ</Link>
+          <NavLink to="/product/cruz">CRUZ</NavLink>
         </li>
         <li>
-          <Link to="/product/tracker">TRACKER</Link>
+          <NavLink to="/product/tracker">TRACKER</NavLink>
         </li>
         <li>
-          <Link to="/product/scrambler">SCRAMBLER</Link>
+          <NavLink to="/product/scrambler">SCRAMBLER</NavLink>
         </li>
       </ul>
     </nav>

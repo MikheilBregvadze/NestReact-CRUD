@@ -1,0 +1,53 @@
+.menu {
+    height: 74px;
+    width: 1534px;
+    margin: auto;
+    display: flex;
+    margin-top: 135px;
+    align-items: center;
+    border-radius: 5px;
+    justify-content: space-between;
+    border: 1px solid rgb(224, 224, 224);
+}
+
+.menu ul {
+    display: flex;
+    align-items: center;
+}
+
+.home {
+    width: 30px;
+    height: 30px;
+    margin: 0 30px;
+    background: url("../../../../assets/images/common/homeIcon.png");
+}
+
+.menu ul li {
+    color: #999999;
+    font-size: 14px;
+    list-style: none;
+    font-family: var(--font-light);
+}
+
+.menu ul li a {
+    position: relative;
+    color: #999999;
+    margin-right: 40px;
+    text-decoration: none;
+}
+
+
+.menu ul li a:before{
+    content: '';
+    width: 1px;
+    height: 15px;
+    top: 2px;
+    right: -20px;
+    position: absolute;
+    background: rgb(224, 224, 224);
+}
+
+.menuRight span {
+    font-size: 16px;
+    margin-right: 45px;
+}
